@@ -1,0 +1,87 @@
+body{
+    background: black;
+    color: white;
+    font-family: "Futura XBlkCnIt BT";
+    color:#005073;
+}
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: #0090cf;
+}
+#container-main{
+    width: 40%;
+    text-align: center;
+    position: fixed;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+.visorCalc{
+    width: 60%;
+    font-size: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: "Futura XBlkCnIt BT";
+    font-weight: bold;
+    color:#005073;
+}
+.visorCalc2{
+    width: 60%;
+    background: rgb(213, 213, 213);
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: "Futura XBlkCnIt BT";
+    font-weight: bold;
+    color:#009bdd;
+}
+.btn-num{
+    background: white;
+    border: none;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin:5px;
+    font-weight: bold;
+    font-family: "Futura XBlkCnIt BT";
+}
+.btn-num:hover,.btn-operador:hover{
+    background: #005073;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin:5px;
+    font-weight: bold;
+    font-family: "Futura XBlkCnIt BT";
+}
+.btn-operador{
+    background: white;
+    color:#005073;
+    border: none;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin:5px;
+    font-weight: bold;
+    font-family: "Futura XBlkCnIt BT";
+}
+#btn-igual{
+    background: #005073;
+}
+#btn-igual:hover{
+    background: #ffc875;
+    color: black;
+}
+.arredondar{
+    color:#005073;
+    font-family: "Poppins Thin";
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+
+
