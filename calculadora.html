@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora JS</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <script>
+       function botao(num){ // passar como parametro o NUM que é o value do INPUT
+
+                    var salvou = document.getElementById('visor').value; // variavel pra armazenar oque ta no visor
+
+                    document.getElementById('visor').value = salvou + num; // atualiza a variavel e atualiza oq ta no visor
+
+                    
+
+                }
+                function Limpar(){// funcao para limpar o visor
+                    
+                    document.getElementById('visor').value = ""; // vai deixar o visor em branco
+                    document.getElementById('visor_secundario').value = "";
+                    salvou = ""; // e a variavel antes criada tambem vai ficar em branco
+                    
+                }
+
+                function Igual(){
+                    
+                    var conta;
+            
+                    document.getElementById('visor_secundario').value = document.getElementById('visor').value;
+                    conta = eval(document.getElementById('visor').value); // função eval pra fazer calculos com string
+                    
+
+                    if (document.getElementById("arrendondamento_sim").checked) {
+                        document.getElementById('visor').value = conta.toFixed(2); // mostra o resultado da conta no visor sem arredondamento
+                    } else if (document.getElementById("arrendondamento_nao").checked) {
+                        document.getElementById('visor').value = conta; // mostra o resultado da conta no visor sem arredondamento
+                    }
+                    else{
+                        alert("Por favor selecione se deseja arredondar ou não!");
+                    }
+
+
+                }
+    </script>
+
+
+</head>
+<body>
+    <label><h2>CALCULADORA MASTER</h2></label>
+    <div id="container-main">
+        
+            
+        <form id="calculadora"><br>
+            <input type="textarea" id="visor_secundario" class="visorCalc2" /><br>
+            <input type="textarea" id="visor" class="visorCalc" /><br>
+            <button type="button" value="7" class="btn-num" onclick="botao(value)">7</button>     <button type="button" value="8" class="btn-num" onclick="botao(value)">8</button>     <button type="button" value="9" class="btn-num" onclick="botao(value)">9</button>     <button type="button" value="-" class="btn-operador" onclick="botao(value)">-</button>    <br>
+            <button type="button" value="4" class="btn-num" onclick="botao(value)">4</button>     <button type="button" value="5" class="btn-num" onclick="botao(value)">5</button>     <button type="button" value="6" class="btn-num" onclick="botao(value)">6</button>     <button type="button" value="*" class="btn-operador" onclick="botao(value)">X</button>    <br>
+            <button type="button" value="1" class="btn-num" onclick="botao(value)">1</button>     <button type="button" value="2" class="btn-num" onclick="botao(value)">2</button>     <button type="button" value="3" class="btn-num" onclick="botao(value)">3</button>     <button type="button" value="+" class="btn-operador" onclick="botao(value)">+</button>    <br>
+            <button type="button" value="0" class="btn-num" onclick="botao(value)">0</button>     <button type="button" value="." class="btn-num" onclick="botao(value)">,</button>     <button type="button" value="=" id="btn-igual" class="btn-num" onclick="Igual()">=</button>     <button type="button" value="/" class="btn-operador" onclick="botao(value)">÷</button>     <br> <button type="button" value="L" class="btn-num" onclick="Limpar()">C</button>       <br>
+            <br>
+                <label class="arredondar"><input type="radio" name="arrendondamento" id="arrendondamento_sim" class="radio-btn" value="s">ARREDONDAMENTO AUTOMÁTICO</label><br>
+                <label class="arredondar"><input type="radio" name="arrendondamento" id="arrendondamento_nao" class="radio-btn" checked="true" value="n">NÃO ARREDONDAR</label><br>
+                <br>
+        </form>
+    </div>
+
+    
+
+</body>
+</html>
